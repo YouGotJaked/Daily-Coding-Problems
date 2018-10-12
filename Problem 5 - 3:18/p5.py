@@ -11,18 +11,17 @@
 #
 
 def cons(a, b):
-    return lambda f : f(a, b)
+    return lambda f: f(a, b)
 
-def car(pair):
-    return lambda pair : pair[0]
+def car(f):
+    return f(lambda x, y: x)
 
-def cdr(pair):
-    return lambda pair : pair[1:]
+def cdr(f):
+    return f(lambda x, y: y)
 
 def main():
-    print cons(3, 4)
-    print car(cons(3, 4))
-    print cdr(cons(3, 4))
+    assert(car(cons(3, 4)) == 3)
+    assert(cdr(cons(3, 4)) == 4)
 
 if __name__ == '__main__':
     main()

@@ -11,7 +11,7 @@
  *    1   1
  */
 
-#include "../include/stdc++.h"
+#include "bits/stdc++.h"
 
 using namespace std;
 

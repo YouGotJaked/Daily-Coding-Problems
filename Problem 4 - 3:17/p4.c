@@ -7,10 +7,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// swap two integers
+// swap two integers using XOR
 void swap(int *x, int *y) {
-    int temp;
-    temp = *x;
+    int temp = *x;
     *x = *y;
     *y = temp;
 }

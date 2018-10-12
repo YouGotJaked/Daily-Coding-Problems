@@ -8,9 +8,11 @@
 #
 # If there are more than one solution possible, return the lexicographically smaller solution.
 # If [a,b] is one solution with a <= b, and [c,d] is another solution with c <= d, then [a,b] < [c,d] if a < c OR a == c AND b < d.
+# use Sieve of Eratosthenes algorithm to generate all prime numbers less than n
 #
 
-# use Sieve of Eratosthenes algorithm to generate all prime numbers less than n
+from __future__ import print_function
+
 def generatePrimeList(n, isPrime):
     isPrime[0] = isPrime[1] = False
     for i in range(2, n + 1):
@@ -34,11 +36,11 @@ def primePair(sum):
 
     for i in xrange(0,sum):
         if (isPrime[i] and isPrime[sum - i]):
-            print i, sum - i
+            print("n = {}\n{} + {} = {}".format(sum, i, sum - i, sum))
             return
 
 def main():
-    n = 74
+    n = 4
     primePair(n)
 
 if __name__ == '__main__':

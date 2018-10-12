@@ -3,7 +3,7 @@
  * For example, given [10, 15, 3, 7] and K of 17, return true since 10 + 7 is 17.
  */
 
-#include "../include/stdc++.h"
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -34,8 +34,8 @@ int main() {
     int size = sizeof(arr) / sizeof(arr[0]);
     
     string output = p1(arr, size, K) ? "True" : "False";
-    
     cout << output << endl;
+
     return 0;
 }
 
